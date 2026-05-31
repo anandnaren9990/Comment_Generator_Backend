@@ -3,10 +3,19 @@ from .app_log import logger
 from .models.model import CommentText
 from .services.llm_service import llm_generate_comment
 from .resources.llm_prompt import prompt
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-@app.post("/generate-comment")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://github.com"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.post("/api/improve")
 async def generate_comment(comment_text: CommentText):
     try: 
         message = [{
