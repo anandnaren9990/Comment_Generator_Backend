@@ -20,4 +20,4 @@ logging.basicConfig(
     handlers=[file_handler,stream_handler]
 )
 
-logger = logging.getLogger("comment-bot")
+logger = logging.getLogger("comment-generator")
