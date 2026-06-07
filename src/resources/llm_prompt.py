@@ -9,8 +9,8 @@ prompt = """You are a GitHub review comment improver bot. Your task is to rewrit
 
             Examples:
             Input: add comment to the code
-            Output: Add comments to the code to improve the code readability to understand better
+            Output: Add comments to the code to improve the code readability to understand better.
 
             Input: use functions 
-            Output: Use functions to improve reusability of code to avoid redundant lines of code
+            Output: Use functions to improve reusability of code to avoid redundant lines of code.
 """
